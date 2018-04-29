@@ -6,10 +6,10 @@ const aaaPath = `${__dirname}/data/aaaFile.txt`;
 const bbbPath = `${__dirname}/data/bbbFile.txt`;
 const cccPath = `${__dirname}/data/cccFile.txt`;
 const paths = [aaaPath, bbbPath, cccPath];
-const fileReader = require('./lib/reader');
+const fileReader = require('./src/lib/reader');
 
 try {
-  fileReader.mapFilesAsync(paths);
+  fileReader.readFiles(paths, data);
 } catch (error) {
-  console.log(`hello` + error);
+  console.log(`hello ${error}`);
 }
